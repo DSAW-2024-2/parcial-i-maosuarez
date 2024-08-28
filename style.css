@@ -1,0 +1,130 @@
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: aliceblue;
+}
+
+.container {
+  max-width: 900px;
+  max-height: auto;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+
+  background-color: white;
+
+  .col-left {
+    width: 450px;
+
+    img {
+      width: 400px;
+    }
+  }
+
+  .col-right {
+    padding: 8px;
+    width: 450px;
+
+    text-justify: center;
+
+    .title {
+      font-weight: 700;
+      font-size: x-large;
+      padding: 5px;
+      padding-bottom: 0;
+    }
+
+    .paragraph {
+      font-size: medium;
+      padding: 4px;
+    }
+
+    .share {
+      margin: 10px;
+      display: flex;
+      justify-content: space-between;
+
+      .info {
+        display: flex;
+
+        .profile {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+
+        .author {
+          margin: 0;
+          color: #999;
+          font-size: 18px;
+        }
+        .date {
+          margin: 0;
+          font-size: 12px;
+        }
+      }
+
+      .share-container {
+        position: relative;
+        display: inline-block;
+
+        .share-button {
+          background-color: hsl(217, 19%, 35%);
+          border: none;
+          cursor: pointer;
+          padding: 5px;
+          border-radius: 50%;
+          margin: 0;
+          margin-right: 30px;
+          margin-top: 12px;
+        }
+
+        .share-options {
+          display: none;
+          position: absolute;
+          bottom: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: hsl(217, 19%, 35%);
+          border-radius: 8px;
+          padding: 5px 10px;
+          margin-right: 40px;
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+          padding-bottom: 25px;
+          clip-path: polygon(
+            100% 0,
+            100% 54%,
+            66% 54%,
+            48% 100%,
+            29% 52%,
+            0 51%,
+            0 0
+          );
+          z-index: 100;
+        }
+
+        .share-options span {
+          color: hsl(212, 23%, 69%);
+          font-size: 12px;
+          margin-right: 10px;
+        }
+
+        .share-options a img {
+          width: 20px;
+          height: 20px;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}
